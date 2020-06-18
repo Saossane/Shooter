@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Inputs.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Inputs/Inputs.inputactions'
 
 using System;
 using System.Collections;
@@ -16,12 +16,12 @@ public class @Inputs : IInputActionCollection, IDisposable
     ""maps"": [
         {
             ""name"": ""Player"",
-            ""id"": ""f7b16945-b653-4b5e-82ae-521e672f74f7"",
+            ""id"": ""95de7cca-cc2e-4594-a2b4-c7adb5f868aa"",
             ""actions"": [
                 {
                     ""name"": ""Move"",
                     ""type"": ""Button"",
-                    ""id"": ""207f6c6b-1d29-4910-922c-94a1be9bb5d7"",
+                    ""id"": ""dd9da78a-4e39-4c36-aef3-26f0e4bf9013"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -29,7 +29,7 @@ public class @Inputs : IInputActionCollection, IDisposable
                 {
                     ""name"": ""Shoot"",
                     ""type"": ""Button"",
-                    ""id"": ""ac80b05d-f6fe-42b5-8d1c-8c7e23471181"",
+                    ""id"": ""9925a56b-10db-4ed4-afea-a18351ad29a6"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -37,9 +37,9 @@ public class @Inputs : IInputActionCollection, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": ""Mouse"",
-                    ""id"": ""ca38c05d-f602-470d-9560-ec79eb79756d"",
-                    ""path"": ""1DAxis"",
+                    ""name"": ""Arrows"",
+                    ""id"": ""c640c77a-6d78-4c3b-b827-3a25c36b2638"",
+                    ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -48,9 +48,9 @@ public class @Inputs : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""negative"",
-                    ""id"": ""f145dbd5-f04f-421c-82cd-be9e3888f27d"",
-                    ""path"": ""<Mouse>/backButton"",
+                    ""name"": ""up"",
+                    ""id"": ""a63ddd7a-6616-424f-b15f-a608c6ec0eee"",
+                    ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -59,9 +59,31 @@ public class @Inputs : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""positive"",
-                    ""id"": ""337ee630-146c-4700-a924-53d06a7cd132"",
-                    ""path"": ""<Mouse>/forwardButton"",
+                    ""name"": ""down"",
+                    ""id"": ""645fd877-5c47-4000-8d50-937b5e60416a"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""2562224f-445c-46aa-b607-4edf5ee76c46"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""111645e1-cf8e-4cf2-9ce9-f8dfb4636960"",
+                    ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -71,7 +93,7 @@ public class @Inputs : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""4742bd23-8069-4f30-952e-a91e3f605f14"",
+                    ""id"": ""5912d3fe-c9fc-432e-b85f-c96b17418069"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",

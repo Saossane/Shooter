@@ -23,8 +23,8 @@ public class BulletBehaviour : MonoBehaviour
         myRigidbody.velocity = new Vector3
         {
             x = speed * Time.fixedDeltaTime,
-            y = 0,
-            z = 0
+            y = speed * Time.fixedDeltaTime,
+            z = speed * Time.fixedDeltaTime,
         };
     }
 
