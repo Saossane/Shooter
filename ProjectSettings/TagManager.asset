@@ -44,6 +44,9 @@ TagManager:
   - name: Ground
     uniqueID: 2957523401
     locked: 0
+  - name: Zombie
+    uniqueID: 3416123717
+    locked: 0
   - name: Player
     uniqueID: 751508275
     locked: 0
