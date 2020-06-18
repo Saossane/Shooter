@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnerBehaviour : MonoBehaviour
 {
-    [SerializeField] private GameObject zombie;
+    [SerializeField] private GameObject enemy;
     [SerializeField] private float minY, maxY;
     [SerializeField] private float minTimeSpawn, maxTimeSpawn;
 
@@ -32,7 +32,7 @@ public class SpawnerBehaviour : MonoBehaviour
             y = Random.Range(minY, maxY),
             z = 0
         };
-        Instantiate(zombie, position, Quaternion.identity);
+        Instantiate(enemy, position, Quaternion.identity);
     }
     
     public void Die()

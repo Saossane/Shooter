@@ -12,7 +12,7 @@ public class PlayerBehaviour : MonoBehaviour
 
 
     private Vector2 direction;
-    private Rigidbody myRigidbody;
+    private Rigidbody2D myRigidbody;
     private Inputs inputs;
     private Camera mainCam; // Référence à la caméra taggée MainCamera
 
@@ -23,7 +23,8 @@ public class PlayerBehaviour : MonoBehaviour
         inputs.Enable();
         inputs.Player.Move.performed += OnMovePerformed;
         inputs.Player.Move.canceled += OnMoveCanceled;
-        myRigidbody = GetComponent<Rigidbody>();
+        inputs.Player.Shoot.performed += OnShootPerformed;
+        myRigidbody = GetComponent<Rigidbody2D>();
         mainCam = Camera.main;
 
 
@@ -73,12 +74,16 @@ public class PlayerBehaviour : MonoBehaviour
         {
             x = Mathf.Clamp(oldPosition.x, leftBottomCorner.x, rightTopCorner.x),
             y = Mathf.Clamp(oldPosition.y, leftBottomCorner.y, rightTopCorner.y),
-            z = oldPosition.z
+            z = Mathf.Clamp(oldPosition.y, leftBottomCorner.y, rightTopCorner.y),
         };
         myRigidbody.position = newPosition;
     }
 
-  
+    private void OnShootPerformed(InputAction.CallbackContext obj)
+    {
+        // On instantie un projectile à la position du joueur avec une rotation nulle
+        Instantiate(projectile, transform.position, Quaternion.identity);
+    }
 
     private void OnCollisionEnter(Collision other)
     {
@@ -94,7 +99,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         inputs.Player.Move.performed -= OnMovePerformed;
         inputs.Player.Move.canceled -= OnMoveCanceled;
-       
+        inputs.Player.Shoot.performed -= OnShootPerformed;
     }
 
     /// <summary>
