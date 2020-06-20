@@ -27,7 +27,6 @@ public class PlayerBehaviour : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
         mainCam = Camera.main;
 
-
     }
 
     private void OnMoveCanceled(InputAction.CallbackContext obj)
