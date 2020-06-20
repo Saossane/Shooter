@@ -16,23 +16,9 @@ public class EnemyBehaviour : MonoBehaviour
         player.onDeath.AddListener(Die); // On ajoute la fonction Die() à la liste des actions à faire à la mort du joueur
     }
 
-    // Update is called once per frame
-    private void Update()
-    {
-        // Déplacement du joueur
-        myRigidbody.velocity = new Vector3
-        {
-            x = -speed * Time.fixedDeltaTime,
-            y = 0,
-            z = 0
-        };
-        // Condition de mort
-        if (transform.position.x < -10)
-        {
-            player.Die();
-            Destroy(gameObject);
-        }
-    }
+
+
+    
 
     private void OnCollisionEnter(Collision other)
     {
