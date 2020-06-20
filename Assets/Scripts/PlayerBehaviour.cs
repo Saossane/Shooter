@@ -43,40 +43,13 @@ public class PlayerBehaviour : MonoBehaviour
     private void FixedUpdate()
     {
         myRigidbody.velocity = direction * (speed * Time.fixedDeltaTime);
-        ClampPosition();
+        
     }
 
     /// <summary>
     /// On s’assure que le joueur reste dans les limites de l’espace de jeu
     /// </summary>
-    private void ClampPosition()
-    {
-        // On récupère la distance entre la camera et le joueur
-        var zDistance = Mathf.Abs(transform.position.z - mainCam.transform.position.z);
-        // On assigne à cette variable la position dans le monde du coin inférieur gauche de la caméra
-        var leftBottomCorner = mainCam.ScreenToWorldPoint(new Vector3
-        {
-            x = 0,
-            y = 0,
-            z = zDistance
-        });
-        // On assigne à cette variable la position dans le monde du coin supérieur droit de la caméra
-        var rightTopCorner = mainCam.ScreenToWorldPoint(new Vector3
-        {
-            x = mainCam.pixelWidth,
-            y = mainCam.pixelHeight,
-            z = zDistance
-        });
-        var oldPosition = myRigidbody.position;
-        // On vient limiter la position en x et y pour qu’elle soit dans les limites du champ de vision de la caméra
-        var newPosition = new Vector3
-        {
-            x = Mathf.Clamp(oldPosition.x, leftBottomCorner.x, rightTopCorner.x),
-            y = Mathf.Clamp(oldPosition.y, leftBottomCorner.y, rightTopCorner.y),
-            z = Mathf.Clamp(oldPosition.y, leftBottomCorner.y, rightTopCorner.y),
-        };
-        myRigidbody.position = newPosition;
-    }
+    
 
     private void OnShootPerformed(InputAction.CallbackContext obj)
     {
