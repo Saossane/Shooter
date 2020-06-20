@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletBehaviour : MonoBehaviour
+public class ProjectileBehaviour : MonoBehaviour
 {
     [SerializeField] private float speed;
 

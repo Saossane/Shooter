@@ -721,7 +721,7 @@ MonoBehaviour:
           m_StringArgument: SpawnerBehaviour.Die
           m_BoolArgument: 0
         m_CallState: 2
-  speed: 500
+  speed: 400
   projectile: {fileID: 6120417372996751766, guid: 30fbd39d4899ff04293c95a4f1fa0dd3,
     type: 3}
   gameOverCanvas: {fileID: 7704376599411605764, guid: 7b24fbf6cfbd2a542ad276a2cfe6dcc4,
