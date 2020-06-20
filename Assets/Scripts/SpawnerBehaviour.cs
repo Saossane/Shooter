@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnerBehaviour : MonoBehaviour
 {
     [SerializeField] private GameObject enemy;
-    [SerializeField] private float minY, maxY;
+    [SerializeField] private float minY, minX, minZ, maxY, maxX, maxZ;
     [SerializeField] private float minTimeSpawn, maxTimeSpawn;
 
 
@@ -28,9 +28,9 @@ public class SpawnerBehaviour : MonoBehaviour
     {
         var position = new Vector3
         {
-            x = transform.position.x,
+            x = Random.Range(minX, maxX),
             y = Random.Range(minY, maxY),
-            z = 0
+            z = Random.Range(minZ, maxZ)
         };
         Instantiate(enemy, position, Quaternion.identity);
     }

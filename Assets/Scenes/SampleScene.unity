@@ -593,7 +593,7 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
-  speed: 100
+  speed: 500
   projectile: {fileID: 6120417372996751766, guid: 30fbd39d4899ff04293c95a4f1fa0dd3,
     type: 3}
   gameOverCanvas: {fileID: 7704376599411605764, guid: 7b24fbf6cfbd2a542ad276a2cfe6dcc4,
@@ -671,11 +671,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7d5c0e4cd71fae409df904a5588bdb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombie: {fileID: 918363977}
-  minY: 5
-  maxY: 10
-  minTimeSpawn: 0.3
-  maxTimeSpawn: 1
+  enemy: {fileID: 918363977}
+  minY: 10
+  minX: 20
+  minZ: 30
+  maxY: 40
+  maxX: 50
+  maxZ: 60
+  minTimeSpawn: 2
+  maxTimeSpawn: 8
 --- !u!4 &1725604967
 Transform:
   m_ObjectHideFlags: 0
